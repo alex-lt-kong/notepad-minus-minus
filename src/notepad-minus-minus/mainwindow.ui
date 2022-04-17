@@ -14,8 +14,8 @@
    <string>Notepad--</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../notepad.png</normaloff>../notepad.png</iconset>
+   <iconset resource="resources.qrc">
+    <normaloff>:/notepad.ico</normaloff>:/notepad.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -65,11 +65,13 @@
      <x>0</x>
      <y>0</y>
      <width>875</width>
-     <height>23</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

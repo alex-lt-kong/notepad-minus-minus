@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../notepad.ico</file>
+        <file>../notepad.png</file>
+    </qresource>
+</RCC>
