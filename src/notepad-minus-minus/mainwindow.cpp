@@ -10,6 +10,16 @@ MainWindow::MainWindow(QWidget *parent)
 
     QSettings settings(this->orgnizationName, this->appName);
     ui->plainTextEditMain->setPlainText(settings.value("content").toString());
+
+    if (settings.value("fontSize").toInt() <= 5) {
+        ui->spinBoxFontSize->setValue(5);
+    }
+    else if (settings.value("fontSize").toInt() >= 25) {
+        ui->spinBoxFontSize->setValue(25);
+    } else {
+        ui->spinBoxFontSize->setValue(settings.value("fontSize").toInt());
+    }
+    on_spinBoxFontSize_valueChanged(ui->spinBoxFontSize->value());
 }
 
 MainWindow::~MainWindow()
@@ -18,7 +28,6 @@ MainWindow::~MainWindow()
 }
 
 // returns number of words in str
-
 int MainWindow::countWords(const char *str)
 {
    if (str == NULL)
@@ -57,5 +66,13 @@ void MainWindow::on_plainTextEditMain_textChanged()
 void MainWindow::on_pushButtonExit_clicked()
 {
     QCoreApplication::quit();
+}
+
+
+void MainWindow::on_spinBoxFontSize_valueChanged(int arg1)
+{
+    ui->plainTextEditMain->setFont(QFont(ui->plainTextEditMain->font().family(), arg1));
+    QSettings settings(this->orgnizationName, this->appName);
+    settings.setValue("fontSize", arg1);
 }
 

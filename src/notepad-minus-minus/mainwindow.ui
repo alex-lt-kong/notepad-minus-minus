@@ -47,6 +47,26 @@
          </spacer>
         </item>
         <item>
+         <widget class="QLabel" name="labelFontsize">
+          <property name="text">
+           <string>Font size</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinBoxFontSize">
+          <property name="minimum">
+           <number>5</number>
+          </property>
+          <property name="maximum">
+           <number>32</number>
+          </property>
+          <property name="value">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="pushButtonExit">
           <property name="text">
            <string>Exit</string>
@@ -65,7 +85,7 @@
      <x>0</x>
      <y>0</y>
      <width>875</width>
-     <height>22</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>

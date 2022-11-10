@@ -20,6 +20,8 @@ private slots:
     void on_plainTextEditMain_textChanged();
     void on_pushButtonExit_clicked();
 
+    void on_spinBoxFontSize_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 
