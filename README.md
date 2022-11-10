@@ -1,5 +1,6 @@
 # notepad-minus-minus
-A super simple notepad
+
+A super simple cross-platform notepad
 
 ## Screenshot
 <img src="./assets/screenshot.png">
